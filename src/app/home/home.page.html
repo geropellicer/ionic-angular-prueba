@@ -1,14 +1,27 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-sm="8" offset-sm="2" size-md="6" offset-md="3">
+          <app-tarjeta-input></app-tarjeta-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col size-sm="8" offset-sm="2" size-md="6" offset-md="3">
+            <ion-list *ngIf="gastos.length">
+              <ion-list-header>
+                <ion-label>Items</ion-label>
+              </ion-list-header>
+              <ion-item *ngFor="let gasto of gastos">
+                <app-tarjeta-display></app-tarjeta-display>
+              </ion-item>
+            </ion-list>
+        </ion-col>
+    </ion-row>
+    <ion-row *ngIf="!gastos.length">
+      <ion-col class="ion-padding" size-sm="8" offset-sm="2" size-md="6" offset-md="3">
+          <p>No hay gastos guardados aún!</p>
+          <p>Ingresa un nuevo gasto para ir conformando una lista.</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

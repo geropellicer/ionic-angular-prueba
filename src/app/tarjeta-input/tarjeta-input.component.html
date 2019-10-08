@@ -1,0 +1,27 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-subtitle>Nueva entrada</ion-card-subtitle>
+    <ion-card-title color="primary">Ingresar nuevo gasto</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Descripcion</ion-label>
+        <ion-input inputmode="text" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label position="floating">Precio</ion-label>
+          <ion-input inputmode="numeric" type="number"></ion-input>
+      </ion-item>
+      <ion-buttons class="ion-margin-top ion-margin-bottom ion-float-right">
+        <ion-button color="danger">
+          <ion-icon slot="start" name="close-circle-outline"></ion-icon>
+          Cancelar
+        </ion-button>
+        <ion-button color="primary">
+          <ion-icon slot="start" name="add-circle-outline"></ion-icon>
+          Añadir
+        </ion-button>
+      </ion-buttons>
+  </ion-card-content>
+</ion-card>
+    

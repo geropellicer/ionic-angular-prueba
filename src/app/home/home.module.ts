@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
+import { TarjetaInputComponent } from '../tarjeta-input/tarjeta-input.component';
+import { TarjetaDisplayComponent } from '../tarjeta-display/tarjeta-display.component';
 
 @NgModule({
   imports: [
@@ -18,6 +20,6 @@ import { HomePage } from './home.page';
       }
     ])
   ],
-  declarations: [HomePage]
+  declarations: [HomePage, TarjetaInputComponent, TarjetaDisplayComponent]
 })
 export class HomePageModule {}
