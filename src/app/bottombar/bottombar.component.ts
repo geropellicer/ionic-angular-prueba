@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Gasto } from '../gasto';
 import { GastosManagerService } from '../gastos-manager.service';
 
 @Component({
@@ -9,12 +8,15 @@ import { GastosManagerService } from '../gastos-manager.service';
 })
 export class BottombarComponent implements OnInit {
 
-  gastos: Gasto[] = [];
+  cantGastos: number;
 
   constructor(private gService: GastosManagerService) { }
 
   ngOnInit() {
-    this.gastos = this.gService.gastos;
+    this.getCantGastos();
   }
 
+  getCantGastos(): void {
+    this.cantGastos = this.gService.getGastos().length;
+  }
 }

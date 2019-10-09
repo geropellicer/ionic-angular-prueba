@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Gasto } from '../gasto';
+import { GastosManagerService  } from '../gastos-manager.service';
 
 @Component({
   selector: 'app-home',
@@ -8,8 +9,15 @@ import { Gasto } from '../gasto';
 })
 export class HomePage {
 
-  gastos: Gasto[] = [];
+  gastos: Gasto[];
 
-  constructor() {}
+  constructor(private gService: GastosManagerService) {}
 
+  ngOnInit() {
+    this.getGastos();
+  }
+
+  getGastos(): void {
+    this.gastos = this.gService.getGastos();
+  }
 }

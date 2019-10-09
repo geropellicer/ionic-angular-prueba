@@ -9,10 +9,10 @@
         <ion-col size-sm="8" offset-sm="2" size-md="6" offset-md="3">
             <ion-list *ngIf="gastos.length">
               <ion-list-header>
-                <ion-label>Items</ion-label>
+                <ion-label>Gastos</ion-label>
               </ion-list-header>
               <ion-item *ngFor="let gasto of gastos">
-                <app-tarjeta-display></app-tarjeta-display>
+                <app-tarjeta-display [id]="gasto.id" [descripcion]="gasto.gasto" [precio]="gasto.precio"></app-tarjeta-display>
               </ion-item>
             </ion-list>
         </ion-col>

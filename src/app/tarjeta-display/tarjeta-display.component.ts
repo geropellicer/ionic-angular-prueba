@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-tarjeta-display',
@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tarjeta-display.component.scss'],
 })
 export class TarjetaDisplayComponent implements OnInit {
+
+  @Input() id: number;
+  @Input() descripcion: string;
+  @Input() precio: number;
 
   constructor() { }
 

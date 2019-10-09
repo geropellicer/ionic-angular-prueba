@@ -6,18 +6,18 @@
   <ion-card-content>
       <ion-item>
         <ion-label position="floating">Descripcion</ion-label>
-        <ion-input inputmode="text" type="text"></ion-input>
+        <ion-input [(ngModel)]="newGasto.texto" inputmode="text" type="text"></ion-input>
       </ion-item>
       <ion-item>
           <ion-label position="floating">Precio</ion-label>
-          <ion-input inputmode="numeric" type="number"></ion-input>
+          <ion-input [(ngModel)]="newGasto.precio" inputmode="numeric" type="number"></ion-input>
       </ion-item>
       <ion-buttons class="ion-margin-top ion-margin-bottom ion-float-right">
-        <ion-button color="danger">
+        <ion-button color="danger" (click)="clearForm()">
           <ion-icon slot="start" name="close-circle-outline"></ion-icon>
           Cancelar
         </ion-button>
-        <ion-button color="primary">
+        <ion-button color="primary" (click)="addGasto()">
           <ion-icon slot="start" name="add-circle-outline"></ion-icon>
           Añadir
         </ion-button>
